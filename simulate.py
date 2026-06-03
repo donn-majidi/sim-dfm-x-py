@@ -44,7 +44,7 @@ kmax = 8*int(min(n,T)/100)**0.25 if int(min(n,T)/100)**0.25 > 0 else 8*1
 
 #### Estimate the number of factors from the ABC criterion
 fig, ax = plt.subplots()
-rhat1, rhat2, ax = ABC_crit(Xdf, kmax=8, ax=ax, demean=True, seed=seed)
+rhat1, rhat2, ax = ABC_crit(Xdf, kmax=kmax, ax=ax, demean=True, seed=seed)
 
 model_pca = PCA(Xdf, standardize=True, demean=True, missing='fill-em')
 model_pca.ic
