@@ -56,6 +56,7 @@ def ABC_crit(data: pd.DataFrame, kmax: int , nbck: int | None = None, cmax: int 
     if kmax is None:
         raise ValueError('Must provide a value for kmax.')
     
+    kmax = int(kmax)
     npace = 1
     step = 500
     T, n  = data.shape
